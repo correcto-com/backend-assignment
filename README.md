@@ -24,7 +24,7 @@ py -m venv .venv            # Windows
 
 # Activar entorno virtual
 source venv/bin/activate    # macOS/Linux
-venv\Scripts\activate       # Windows
+.venv\Scripts\activate       # Windows
 
 # Instalar dependencias
 pip install -r requirements.txt
@@ -68,6 +68,13 @@ El reto consiste en implementar una API REST que simule las operaciones básicas
    {}
    ```
 
+## ⚙️ Configuración del entorno
+Para levantar la base de datos y conectar con el proyecto necesitas un archivo .env en la raíz del proyecto con las siguientes variables de entorno:
+
+```bash
+cp .env.example .env
+```
+
 ## 🐘 Base de datos con Docker
 Para levantar PostgreSQL localmente, asegúrate de tener [Docker instalado](https://www.docker.com/).
 
@@ -96,7 +103,7 @@ Una vez que tengas la base de datos corriendo, sigue estos pasos para iniciar el
 ```bash
 # Asegúrate de que tu entorno virtual esté activado
 source venv/bin/activate    # macOS/Linux
-venv\Scripts\activate       # Windows
+.venv\Scripts\activate       # Windows
 
 # Ejecutar las migraciones de la base de datos
 python manage.py migrate
@@ -106,4 +113,9 @@ python manage.py createsuperuser
 
 # Iniciar el servidor de desarrollo
 python manage.py runserver
+
+# Abre tu navegador y accede al panel de administración de Django en:
+http://localhost:8000/admin/
+
+# Podrás iniciar sesión con el superusuario que creaste anteriomente.
 ```
