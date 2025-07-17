@@ -32,6 +32,7 @@ pip install -r requirements.txt
 
 ## 🎯 Objetivo de la prueba:
 El reto consiste en implementar una API REST que simule las operaciones básicas de un cajero automático, siguiendo estas especificaciones:
+**Nota importante**: El sistema debe ser capaz de manejar múltiples cuentas bancarias de forma independiente.
 
 ### Endpoints a implementar
 
@@ -67,6 +68,8 @@ El reto consiste en implementar una API REST que simule las operaciones básicas
    ```json
    {}
    ```
+
+**Nota**: Los endpoints pueden ser modificados ligeramente según tu diseño.
 
 ## ⚙️ Configuración del entorno
 Para levantar la base de datos y conectar con el proyecto necesitas un archivo .env en la raíz del proyecto con las siguientes variables de entorno:
